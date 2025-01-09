@@ -5,6 +5,9 @@ import useWindowWidth from "@/hooks/windowWitdth";
 import useOnlineStatus from "@/hooks/onlineStatus";
 import Styles from "./page.module.css"
 
+import UseFetch from "@/hooks/UseFetch";
+
+
 export default function Home() {
 
   const { count, increment, decrement } = useCounter(5);
@@ -19,11 +22,18 @@ export default function Home() {
   //return width < breakPoint ? console.log('mobile view'): console.log('desktop view');
   
   return (
+    <>
+    <p>Du er {isOnline ? 'Online' : 'Offline'}</p>
+    
+    <p>{width < breakPoint ? console.log('mobile view'): console.log('desktop view')}</p>
+   
     <div>
       <p>Tæller: {count}</p>
       <button onClick={increment}>+1</button>
       <button onClick={decrement}>-1</button>
     </div>
+    
+    </>
   )
 
   
