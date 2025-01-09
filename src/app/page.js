@@ -15,16 +15,16 @@ export default function Home() {
 
   const isOnline = useOnlineStatus();
 
-  return <p>Du er {isOnline ? 'Online' : 'Offline'}</p>
+  //return <p>Du er {isOnline ? 'Online' : 'Offline'}</p>
   //return width < breakPoint ? console.log('mobile view'): console.log('desktop view');
   
-  // return {
-    // <div >
-    //   <p>Tæller: {count}</p>
-    //   <button onClick={increment}>+1</button>
-    //   <button onClick={decrement}>-1</button>
-    // </div>
-  // }
+  return (
+    <div>
+      <p>Tæller: {count}</p>
+      <button onClick={increment}>+1</button>
+      <button onClick={decrement}>-1</button>
+    </div>
+  )
 
   
 }
